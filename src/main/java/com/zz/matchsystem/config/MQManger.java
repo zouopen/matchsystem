@@ -20,6 +20,8 @@ import java.util.concurrent.ThreadFactory;
  * @Author：EvilSay
  * @Date：17.10.23 23:50
  * @description:
+ *
+ * todo 可以抽象成工厂类交给Spring管理队列的生命周期
  */
 @Component
 public class MQManger {

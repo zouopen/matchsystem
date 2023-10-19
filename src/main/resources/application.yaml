@@ -1,0 +1,5 @@
+netty:
+    port: 8900
+stomp:
+    # ?????????
+    user-destination: /notice

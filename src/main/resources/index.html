@@ -1,0 +1,19 @@
+<html>
+
+</html>
+<script src="https://cdn.bootcdn.net/ajax/libs/stomp.js/2.3.3/stomp.js"></script>
+<script>
+    let socket = new WebSocket("ws://localhost:8080/stomp");
+    let stompClient = Stomp.over(socket);
+    stompClient.connect(function (frame) {
+        console.log('已连接【' + frame + '】');
+    // 成功打开连接的时候，需要做的事情
+    // 订阅属于自己的主题
+    stompClient.subscribe('/topic/symbol', function (greeting) {
+        // console.log(greeting)
+    },headers);
+},function (error){
+    // 连接关闭需要做的事情
+    console.log('stomp连接关闭>>>' + error);
+});
+</script>
